@@ -1,13 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 18px;
+}
+.HeadingText {
+  color: white;
+  font-size: 65px;
+  font-family: 'Roboto Slab', serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Opening sliding text */
+div.slide-right {
+  width:100%;
+  overflow:hidden;
 }
+div.slide-right p {
+  animation: 2s slide-right;
+  margin: 0px;
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* NavBar changes */
+.navBr {
+  background-color: rgb(20, 20, 20)!important;
+}
+
+/* Cards */
+.PageCard {
+  margin-top: 40px 0px!important;
+  font-size: 20px;
+  background-image: url(/public/images/bbblurry.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(20, 20, 20)!important;
+  color: white;
+}
+.Card2 {
+  position: relative; top: 50px
+}
+.lastCard {
+  margin-bottom: 275px;
+}
+.pricingOptionCard {
+  background-color: rgb(30, 30, 34)!important;
+  margin-top: 40px 0px!important;
+  font-size: 20px;
+  color: white;
+}
+.BasicPageCard {
+  margin-bottom: 100px!important;
+}
+/*Card of me*/
+.iCard {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background: center no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  transform: 
+  rotate(20deg)
+  skew(-10deg, -10deg);
+  box-shadow: 25px 10px rgb(217 220 242 / 75%), 
+  50px 20px rgb(44 217 255 / 50%), 
+  75px 30px rgb(126 255 178 / 45%);
+  transition: 
+    translate 0.25s,
+}
+.iCard:hover {
+  translate: 0 -20px;
+}
+.Pcard {
+  transition: 
+    translate 0.25s,
+}
+.Pcard:hover {
+  translate: 0 -20px;
+}
+/*scroll down*/
+.mouse {
+  display: inline-flex;
+  width: 25px;
+  height: 50px; 
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+.mouse-wheel {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: auto;
+  animation: movewheel 1.25s
+  linear infinite;
+}
+@keyframes movewheel {
+  0% {
+  opacity: 0;
+  translate: 0 16px;
+  }
+  100% {
+  opacity: 1;
+  translate: 0 -16px;
+  }
+}
+.scrollD {
+  color: white;
+  font-size: 20px;
+}
+
+/* Rows */
+.homePageRowOne {
+  margin: 50px 0px!important;
+}
+.homePageRowTwo {
+  padding: 250px 0px;
+}
+.pricingPageRowOne {
+  margin: 50px 0px!important;
+}
+.BasicFirstRow {
+  margin: 50px 0px!important;
+}
+.contactFirstPage {
+  margin: 50px 0px!important;
+}
+.contactFirstRow {
+  margin-top: 120px!important;
+}
+
+/* Fill-Ins */
+.secondSlideFillIn {
+  height: 400px;
+}
+.thirdSlideFillIn {
+  height: 120px;
+}
+
+
+/* Second Slide-in */
+.StartingAt {
+  font-size: 35px;
+}
+.for12months {
+  font-size: 25px;
+  position: relative; top: -130px;
+}
+.fifthteenD {
+  font-size: 230px;
+  position: relative; top: -70px;
+}
+
+/* React Out card links */
+.ROLink {
+  color: rgb(83, 90, 76)!important;
+  padding: 2px 5px 7px 5px;
+  border-radius: 10px;
+}
+.ROLink:hover {
+  color:white!important;
+  background-color: rgb(136, 136, 136);
+}
+
+/* Footer */
+footer {
+  font-size: 20px;
+  color: white;
+  background-color: rgb(20, 20, 20);
+  padding: 20px;
+}
+.FLink {
+  color: white;
+}
+.FLink:hover {
+  color: rgb(86, 86, 86);
+}
+
+/* Pricing Page */
+.pricingFirstSlide {
+  font-size: 35px;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+}
+
+.btnToLink {
+  text-decoration: none!important;
+}
+.btnToLink:hover {
+  background-color: rgb(19, 19, 19)!important;
+  text-decoration: none;
+}
+.choices {
+  margin-top: 120px!important;
+}
+
+/* Extra Spacing */
+.PHeight {
+  height: 50px;
+}
+
+.planHeading {
+  color: White;
+}
+.planHeading:hover {
+  color: rgb(83, 90, 76);
+}
+
+/* Basic Site Page */
+.BasicFirstSlide {
+  font-size: 60px;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Contact page */
+.contactFirstSlide {
+  font-size: 35px;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+}
+.contactLink {
+  color: white;
+}
+.contactLink:hover {
+  color: rgb(164, 164, 164);
+}
+.contactCard {
+  margin-bottom: 20px;
+}
+.pricingOptionCard {
+  margin-bottom: 20px;
+}
+.getInContactBtn {
+  padding: 15px 100px 10px 100px!important;
+}
+
+/* 768 or lower */
+@media (max-width: 768px) {
+  .Card2 {
+    position: relative; top: -110px
+  }
+  .Pcard1 {
+    margin-bottom: 40px;
+  }
+}
+
+/* 768 or higher */
+@media (min-width: 768px) {
+  .HeadingText {
+    font-size: 65px;
+  }
+  .fifthteenD {
+    font-size: 200px;
+  }
+  .homePageRowOne {
+    margin: 100px 0px!important;
+  }
+  .homePageRowTwo {
+    margin: 400px 0px!important;
+  }
+  .pricingFirstSlide {
+    font-size: 65px;
+  }
+  .contactSlideText {
+    font-size: 65px;
+  }
+  .scroll {
+    margin-top: 200px;
+  }
+}
+
+/* 992 or higher */
+@media (min-width: 992px) {
+  .HeadingText {
+    font-size: 85px;
+  }
+  .fifthteenD {
+    font-size: 250px;
+  }
+  .for12months {
+    font-size: 35px;
+  }
+}
+
+/* 
+slide in from right example
+<style>
+div.slide-left {
+  width:100%;
+  overflow:hidden;
+}
+div.slide-left p {
+  animation: slide-left 10s;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+</style>
+
+<div class="slide-left">
+<p>Never fight an inanimate object.</p>
+</div> */

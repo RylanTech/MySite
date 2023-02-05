@@ -1,0 +1,5 @@
+urls
+https://rylanworkman.com
+https://rylanworkman.com/pricing
+https://rylanworkman.com/basic
+https://rylanworkman.com/contact
