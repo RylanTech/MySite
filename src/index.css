@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
   font-family: 'Roboto', sans-serif;
-  color: white;
   font-size: 18px;
 }
 .HeadingText {
-  color: white;
   font-size: 65px;
   font-family: 'Roboto Slab', serif;
+  z-index: 2;
+}
+
+/* Underlined */
+.underline {
+  text-decoration: underline;
+}
+.notUnderlined {
+  text-decoration: none;
 }
 
 /* Opening sliding text */
@@ -33,7 +40,7 @@ div.slide-right p {
 
 /* NavBar changes */
 .navBr {
-  background-color: rgb(20, 20, 20)!important;
+  z-index: 2;
 }
 
 /* Cards */
@@ -43,9 +50,21 @@ div.slide-right p {
   background-image: url(/public/images/bbblurry.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgb(20, 20, 20)!important;
-  color: white;
+  /* background-color: rgb(20, 20, 20)!important; */
+  z-index: 2;
+  animation: rotate 1s ease-in-out;
 }
+@keyframes rotate {
+  0% {
+    opacity: 0;
+    translate: 0 16px;
+    }
+    100% {
+    opacity: 1;
+    translate: 0px;
+    }
+}
+
 .Card2 {
   position: relative; top: 50px
 }
@@ -56,7 +75,6 @@ div.slide-right p {
   background-color: rgb(30, 30, 34)!important;
   margin-top: 40px 0px!important;
   font-size: 20px;
-  color: white;
 }
 .BasicPageCard {
   margin-bottom: 100px!important;
@@ -64,7 +82,7 @@ div.slide-right p {
 /*Card of me*/
 .iCard {
   width: 200px;
-  height: 200px;
+  height: 291px;
   margin: 0 auto;
   background: center no-repeat;
   background-size: cover;
@@ -93,14 +111,14 @@ div.slide-right p {
   display: inline-flex;
   width: 25px;
   height: 50px; 
-  border: 2px solid #fff;
+  border: 2px solid #6d6d6d;
   border-radius: 20px;
 }
 .mouse-wheel {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background-color: #fff;
+  background-color: #6d6d6d;
   border-radius: 50%;
   margin: auto;
   animation: movewheel 1.25s
@@ -117,7 +135,6 @@ div.slide-right p {
   }
 }
 .scrollD {
-  color: white;
   font-size: 20px;
 }
 
@@ -126,7 +143,7 @@ div.slide-right p {
   margin: 50px 0px!important;
 }
 .homePageRowTwo {
-  padding: 250px 0px;
+  padding: 50px 0px;
 }
 .pricingPageRowOne {
   margin: 50px 0px!important;
@@ -153,36 +170,55 @@ div.slide-right p {
 /* Second Slide-in */
 .StartingAt {
   font-size: 35px;
-}
-.for12months {
-  font-size: 25px;
-  position: relative; top: -130px;
+  color: white;
+  text-decoration: underline;
 }
 .fifthteenD {
-  font-size: 230px;
-  position: relative; top: -70px;
+  font-size: 120px;
+  position: relative; top: -35px;
+  padding-bottom: 55px;
+  color: white;
+  text-decoration: underline;
 }
+.git:hover p {
+  background: -webkit-linear-gradient(#eee, #0c4b24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.git:hover {
+  text-decoration: underline!important;
+  color: white;
+}
+.keepLinkWhite {
+  color: white;
+}
+.keepLinkWhite:hover {
+  color: rgb(199, 199, 199);
+}
+/* .for12months {
+  font-size: 25px;
+  position: relative; top: -65px;
+  padding-bottom: 55px;
+} */
 
 /* React Out card links */
 .ROLink {
-  color: rgb(83, 90, 76)!important;
+  /* color: rgb(83, 90, 76)!important; */
   padding: 2px 5px 7px 5px;
   border-radius: 10px;
 }
 .ROLink:hover {
-  color:white!important;
+  /* color:white!important; */
   background-color: rgb(136, 136, 136);
 }
 
 /* Footer */
 footer {
   font-size: 20px;
-  color: white;
-  background-color: rgb(20, 20, 20);
   padding: 20px;
 }
 .FLink {
-  color: white;
+  color: rgb(154, 211, 133);
 }
 .FLink:hover {
   color: rgb(86, 86, 86);
@@ -191,13 +227,32 @@ footer {
 /* Pricing Page */
 .pricingFirstSlide {
   font-size: 35px;
-  color: white;
   font-family: 'Roboto Slab', serif;
 }
 
 .btnToLink {
   text-decoration: none!important;
 }
+/* <head>
+  <style type="text/css">
+    .body {
+    background-color: black;
+    color: white;
+    padding: 20px 10px;
+    }
+    .para {
+    background-color: rgb(87, 146, 65);
+    padding: 10px 5px;
+    }
+  </style>
+</head>
+<div class="body">
+  <h1>Hello there!</h1>
+  <div class="para">
+  	<p>My name is Rylan and I am a web developer! I love learning more about technology!</p>
+  	<p>I am currently available for hire as a web developer (I'm looking at you floatplane!) But if your just a person who needs a portfolio site or you need 	something for your company, feel free to find out more details about me at <a href="https://rylanworkman.com" class="link">RylanWorkman.com</a>		</p>
+  </div>
+</div> */
 .btnToLink:hover {
   background-color: rgb(19, 19, 19)!important;
   text-decoration: none;
@@ -206,14 +261,36 @@ footer {
   margin-top: 120px!important;
 }
 
+/* About Page */
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 24px;
+  padding: 15px;
+}
+
+.edu {
+  padding-top: 25px;
+}
+
+.AbtFtr {
+  padding: 40px;
+}
+
+.links a {
+  text-decoration: none;
+  color: rgb(177, 238, 177);
+}
+
+.links a:hover {
+  color: white;
+}
+ 
 /* Extra Spacing */
 .PHeight {
   height: 50px;
 }
 
-.planHeading {
-  color: White;
-}
 .planHeading:hover {
   color: rgb(83, 90, 76);
 }
@@ -221,21 +298,16 @@ footer {
 /* Basic Site Page */
 .BasicFirstSlide {
   font-size: 60px;
-  color: white;
   font-family: 'Roboto Slab', serif;
 }
 
 /* Contact page */
 .contactFirstSlide {
   font-size: 35px;
-  color: white;
   font-family: 'Roboto Slab', serif;
 }
-.contactLink {
-  color: white;
-}
 .contactLink:hover {
-  color: rgb(164, 164, 164);
+  color: rgb(168, 237, 131);
 }
 .contactCard {
   margin-bottom: 20px;
@@ -247,8 +319,58 @@ footer {
   padding: 15px 100px 10px 100px!important;
 }
 
+/* modal */
+.modal-body {
+  color: black;
+}
+.modal-header {
+  color: black;
+}
+/* Hover effect from hyperplexed on YT */
+/* #blob {
+  background-color: white;
+  height: 500px;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  z-index: 2;
+  filter: blur(250px);
+  background: linear-gradient(
+    to right,
+    rgb(158, 204, 151),
+    rgb(10, 50, 10)
+  );
+  animation: rotate2 20s infinite;
+}
+@keyframes rotate2 {
+  from {
+    rotate:0deg;
+  }
+
+  50% {
+    scale: 1 1.2;
+  }
+  to {
+    rotate: 360deg;
+  }
+} */
+
+
+/* Profile */
+.profileLink {
+  color: rgb(154, 211, 133);
+}
+.profileLink:hover {
+  color: rgb(86, 86, 86);
+}
+
+
+
 /* 768 or lower */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .Card2 {
     position: relative; top: -110px
   }
@@ -261,9 +383,10 @@ footer {
 @media (min-width: 768px) {
   .HeadingText {
     font-size: 65px;
+    padding-top: 100px;
   }
   .fifthteenD {
-    font-size: 200px;
+    font-size: 100px;
   }
   .homePageRowOne {
     margin: 100px 0px!important;
@@ -286,13 +409,15 @@ footer {
 @media (min-width: 992px) {
   .HeadingText {
     font-size: 85px;
+    padding-top: 50px;
   }
   .fifthteenD {
-    font-size: 250px;
+    font-size: 150px;
   }
   .for12months {
     font-size: 35px;
   }
+
 }
 
 /* 

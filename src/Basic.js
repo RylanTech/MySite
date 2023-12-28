@@ -1,12 +1,24 @@
+import { useEffect } from "react";
 import { Button, Card, Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
-function Basic() {
+function Basic(props) {
+    let cards = document.getElementsByClassName("PageCard");
+    let pCards = document.getElementsByClassName("pricingOptionCard")
+
+    useEffect(() => {
+        for (let i = 0; i < pCards.length; i++) {
+            pCards[i].style = props.cardColor;
+            if (cards[i]) {
+            cards[i].style = props.cardColor;
+            }
+        }
+    });
     return (
         <div>
             <Container>
                 <Row className="BasicFirstRow">
-                    <div class="slide-right col-12">
+                    <div className="slide-right col-12">
                         <p className="BasicFirstSlide">Basic Site Plan</p>
                     </div>
                 </Row>
@@ -36,8 +48,7 @@ function Basic() {
                                                 <br/>
                                                 <h4>Comes with</h4>
                                                 <p>Free website</p>
-                                                <p>Hosting</p>
-                                                <p>Domain name</p>
+                                                <p>Hosting & Domain</p>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
@@ -50,8 +61,7 @@ function Basic() {
                                                 <br/>
                                                 <h4>Comes with</h4>
                                                 <p>$40 website</p>
-                                                <p>Hosting</p>
-                                                <p>Domain name</p>
+                                                <p>Hosting & Domain</p>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
@@ -64,8 +74,7 @@ function Basic() {
                                                 <br/>
                                                 <h4>Comes with</h4>
                                                 <p>$60 website</p>
-                                                <p>Hosting</p>
-                                                <p>Domain name</p>
+                                                <p>Hosting & Domain</p>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
@@ -78,8 +87,7 @@ function Basic() {
                                                 <br/>
                                                 <h4>Comes with</h4>
                                                 <p>$80 website</p>
-                                                <p>Hosting</p>
-                                                <p>Domain name</p>
+                                                <p>Hosting & Domain</p>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
