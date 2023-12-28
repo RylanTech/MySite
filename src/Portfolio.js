@@ -40,6 +40,18 @@ function Profile(props) {
                             </Card.Header>
                         </Card>
                     </div>
+                    <div className="col-lg-1"/>
+                    <div className="col-lg-1"/>
+                    <div className="col-6 col-lg-5 edu">
+                        <Card className="col-12 PageCard">
+                            <Card.Body>
+                                <Card.Img className="eduPhoto" src="/images/churchhiveweb.png" />
+                            </Card.Body>
+                            <Card.Header>
+                                <a className="profileLink" target="_blank" href="https://churchhive.app">Church Hive</a>
+                            </Card.Header>
+                        </Card>
+                    </div>
                 </Row>
                 <Row>
                     <div className="AbtFtr"/>

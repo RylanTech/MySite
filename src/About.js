@@ -41,6 +41,7 @@ function About(props) {
                         </Card.Body>
                         <div className="links">
                         <a target="blank" href="https://www.linkedin.com/in/rylanworkman/">LinkedIn</a>
+                        <a target="blank" href="/documents/12-28-23-ATS-Resume.pdf">Resume</a>
                         <a href="mailto:rylandeveloper@gmail.com">Email</a>
                         <a target="blank" href="https://github.com/RylanTech">Github</a>
                     </div>

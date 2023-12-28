@@ -173,11 +173,23 @@ div.slide-right p {
   color: white;
   text-decoration: underline;
 }
+.StartingAtTwo {
+  font-size: 35px;
+  color: black;
+  text-decoration: underline;
+}
 .fifthteenD {
   font-size: 120px;
   position: relative; top: -35px;
   padding-bottom: 55px;
   color: white;
+  text-decoration: underline;
+}
+.fifthteenDTwo {
+  font-size: 120px;
+  position: relative; top: -35px;
+  padding-bottom: 55px;
+  color: black;
   text-decoration: underline;
 }
 .git:hover p {
@@ -186,6 +198,15 @@ div.slide-right p {
   -webkit-text-fill-color: transparent;
 }
 .git:hover {
+  text-decoration: underline!important;
+  color: black;
+}
+.gitTwo:hover p {
+  background: -webkit-linear-gradient(#eee, #0c4b24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gitTwo:hover {
   text-decoration: underline!important;
   color: white;
 }
@@ -273,13 +294,17 @@ footer {
   padding-top: 25px;
 }
 
+.eduPhoto {
+  aspect-ratio: 3/2;
+}
+
 .AbtFtr {
   padding: 40px;
 }
 
 .links a {
   text-decoration: none;
-  color: rgb(177, 238, 177);
+  color: rgb(141, 210, 141);
 }
 
 .links a:hover {
@@ -388,6 +413,9 @@ footer {
   .fifthteenD {
     font-size: 100px;
   }
+  .fifthteenDTwo {
+    font-size: 100px;
+  }
   .homePageRowOne {
     margin: 100px 0px!important;
   }
@@ -412,6 +440,9 @@ footer {
     padding-top: 50px;
   }
   .fifthteenD {
+    font-size: 150px;
+  }
+  .fifthteenDTwo {
     font-size: 150px;
   }
   .for12months {

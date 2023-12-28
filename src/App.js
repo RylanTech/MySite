@@ -55,7 +55,7 @@ function App() {
       <Home toggleTheme={toggleTheme} theme={theme} setTheme={setTheme} />
       <Outlet />
       <Routes>
-        <Route path="/" element={<HomePage cardColor={cardColor} />} backgroundColor={backgroundColor} />
+        <Route path="/" element={<HomePage cardColor={cardColor} textColor={textColor}/>} backgroundColor={backgroundColor} />
         <Route path="portfolio" element={<Profile cardColor={cardColor} textColor={textColor}/>} />
         <Route path="about" element={<About cardColor={cardColor} textColor={textColor}/>} />
         <Route path="basic" element={<Basic cardColor={cardColor}/>} />

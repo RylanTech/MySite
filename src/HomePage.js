@@ -6,15 +6,34 @@ function HomePage(props) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isScrolled2, setIsScrolled2] = useState(false);
 
+    const [SAclassName, setSAclassName] = useState("StartingAt")
+    const [FDclassName, setFDclassName] = useState("fifthteenD")
+    const [gitClassName, setGitClassName] = useState("git")
+
     let cards = document.getElementsByClassName("PageCard");
 
     useEffect(() => {
         for (let i = 0; i < cards.length; i++) {
             cards[i].style = props.cardColor;
         }
+        
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [props.theme]);
+
+    useEffect(() => {
+        console.log(props.textColor)
+        if (props.textColor === "color: white;") {
+            setSAclassName("StartingAt")
+            setFDclassName("fifthteenD")
+            setGitClassName("gitTwo")
+
+        } else if (props.textColor === "color: black") {
+            setSAclassName("StartingAtTwo")
+            setFDclassName("fifthteenDTwo")
+            setGitClassName("git")
+        }
+    },[props])
 
     const handleScroll = () => {
         // Get the current scroll position
@@ -41,9 +60,9 @@ function HomePage(props) {
         return (
             <div className="HeadingText col-12 col-md-6">
                 <div className="slide-right">
-                    <a className="git" target="_blank" href="https://calendly.com/rylantech/web-requirements">
-                        <p className="StartingAt">Get in</p>
-                        <p className="fifthteenD">Touch</p>
+                    <a className={gitClassName} target="_blank" href="https://calendly.com/rylantech/web-requirements">
+                        <p className={SAclassName}>Get in</p>
+                        <p className={FDclassName}>Touch</p>
                     </a>
                 </div>
             </div>
@@ -80,11 +99,10 @@ function HomePage(props) {
                             <Card.Body>
                                 <Card.Header>Rylan Workman</Card.Header>
                                 <Card.Text>
-                                    I can develop your or your organization's site with care. With me,
                                     you can be sure you're getting the best in quality and
                                     customer service. From custom designs to regular
                                     maintenance, I'm here to help. Once we're done, the
-                                    site file is yours or I can host it for you, your choice. <a href="https://calendly.com/rylantech/web-requirements" target="_blank" className="keepLinkWhite">Contact me</a> and let's get started on your website project!
+                                    site file is yours or I can host it for you, your choice. <a href="https://calendly.com/rylantech/web-requirements" target="_blank" className="FLink">Contact me</a> and let's get started on your website project!
                                 </Card.Text>
                             </Card.Body>
                         </Card>
@@ -109,7 +127,7 @@ function HomePage(props) {
                     <div className="col-12 col-md-6">
                         <Card className="PageCard Card2">
                             <Card.Body>
-                                <Card.Header><a className="keepLinkWhite" target="_blank" href="https://calendly.com/rylantech/web-requirements">Schedule a time to talk!</a></Card.Header>
+                                <Card.Header><a className="FLink" target="_blank" href="https://calendly.com/rylantech/web-requirements">Schedule a time to talk!</a></Card.Header>
                                 <Card.Text>
 
                                     Get in Contact to discuss what you want for your website to get a better idea of the pricing and development timeline
