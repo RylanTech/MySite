@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import { useEffect, useState } from "react";
 import About from "./About";
 import Profile from "./Portfolio";
+import Rpass from "./Portfolio/Rpass";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -57,6 +58,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage cardColor={cardColor} textColor={textColor}/>} backgroundColor={backgroundColor} />
         <Route path="portfolio" element={<Profile cardColor={cardColor} textColor={textColor}/>} />
+        <Route path="portfolio/rpass" element={<Rpass cardColor={cardColor} textColor={textColor}/>}/>
         <Route path="about" element={<About cardColor={cardColor} textColor={textColor}/>} />
         <Route path="basic" element={<Basic cardColor={cardColor}/>} />
         <Route path="contact" element={<Contact cardColor={cardColor} textColor={textColor}/>} />
