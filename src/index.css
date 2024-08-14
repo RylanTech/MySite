@@ -351,6 +351,15 @@ footer {
 .modal-header {
   color: black;
 }
+
+.youtube-video {
+  aspect-ratio: 16/9;
+  margin: 12px 0px;
+}
+.youtube-video-card {
+  margin: 25px 0px;
+}
+
 /* Hover effect from hyperplexed on YT */
 /* #blob {
   background-color: white;
